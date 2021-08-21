@@ -6,28 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usando Tailwind CSS</title>
-    
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
 </head>
 
 <body>
     <form class="myForm" method="GET" enctype="application/x-www-form-urlencoded" action="/noexiste.html">
+       
+       <h1 class="bg-blue-500 text-white">FORMULARIO USANDO Tailwind</h1>
         <p>
 
             <label>Nombre
-                <input type="text" name="nombre_cliente" required>
+                <input type="text" name="nombre_cliente" class="focus:ring-2 focus:ring-blue-600 ..." required>
             </label>
         </p>
         <p>
             <label>Telefono
-                <input type="tel" name="Numero_telefono" required>
+                <input type="tel" name="Numero_telefono" class="focus:ring-2 focus:ring-blue-600 ..." required>
             </label>
         </p>
         <p>
 
             <label>Email
-                <input type="email" name="direccion_correo">
+                <input type="email" name="direccion_correo" class="border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ...">
             </label>
+            
+
         </p>
         <fieldset>
             <legend>Que taxi quiere?</legend>
@@ -37,6 +41,7 @@
                 </label>
                 carrito
             </p>
+
             <p>
                 <label>
                     <input type="radio" name="taxi" required value="van">
@@ -90,7 +95,7 @@
         </p>
         <p>
             <label>Dejar en:
-                <input type="text" name="dejar_en"  required list="destino">
+                <input type="text" name="dejar_en" required list="destino">
             </label>
         </p>
         <datalist id="destino">
@@ -103,9 +108,12 @@
                 <textarea name="Comentarios" maxlength="500"></textarea>
             </label>
         </p>
-        
+
         <p>
-            <button onclick="location.href='https://www.umg.edu.gt'">Hacer Cita</button>
+            <button onclick="location.href='https://www.umg.edu.gt'"
+                class="bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 ...">Hacer
+                Cita</button>
+           
         </p>
     </form>
 </body>
