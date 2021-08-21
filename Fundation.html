@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIMER FORMULARIO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <form class="myForm" method="GET" enctype="application/x-www-form-urlencoded" action="/noexiste.html">
+        <p>
+            
+
+            <label>Nombre
+                <input type="text" name="nombre_cliente" required>
+            </label>
+        </p>
+        <p>
+
+            <label>Telefono
+                <input type="tel" name="Numero_telefono" required>
+            </label>
+        </p>
+        <p>
+
+            <label>Email
+                <input type="email" name="direccion_correo">
+            </label>
+        </p>
+        <fieldset>
+            <legend>Que taxi quiere?</legend>
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="car">
+                </label>
+                carrito
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="van">
+                </label>
+                suv
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="tuktuk">
+                </label>
+                tuk tuk
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Extras</legend>
+            <P>
+                <label>
+                    <input type="checkbox" name="EXTRAS" value="baby">
+                    Silla de bebe
+                </label>
+            </P>
+            <p>
+                <label>
+                    <input type="checkbox" name="extras" value="musica">
+                    NO REGUETON
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="extras" value="silladeruedas">
+                    Silla de Ruedas
+                </label>
+            </p>
+        </fieldset>
+
+        <p>
+            <label>Dia y hora?
+                <input type="datetime-local" name="fecha_hora" required>
+            </label>
+        </p>
+        <p>
+            <label>Lugar para recoger
+                <select id="pickup_place" name="pickup_place">
+                    <option value="" selected="selected">Seleccione Opcion</option>
+                    <option value="Oficina">Oficina</option>
+                    <option value="feria">La Feria</option>
+                    <option value="La_U">La Universidad</option>
+                    <option value="Nose">Le digo al cacho</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <label>Dejar en:
+                <input type="text" name="dejar_en"  required list="destino">
+            </label>
+        </p>
+        <datalist id="destino">
+            <option value="Aeropuerto"></option>
+            <option value="Playa"></option>
+            <option value="La Biblioteca"></option>
+        </datalist>
+        <p>
+            <label> Intrucciones Especiales
+                <textarea name="Comentarios" maxlength="500"></textarea>
+            </label>
+        </p>
+        
+        <p>
+            <button onclick="location.href='https://www.umg.edu.gt'">Hacer Cita</button>
+        </p>
+    </form>
+</body>
+
+</html>
